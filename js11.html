@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>JS 11</title>
+    <style>
+		#div1 { background-color: red; border-style:dotted;}
+		#div2 { background-color: green; border-style:dotted;}
+		#div3 { background-color: blue; border-style:dotted;}
+		#div4 { background-color: orange; border-style:dotted;}
+		#div5 { background-color: purple; border-style:dotted;}
+	</style>
+    <script>
+		function rutina1() {
+			document.body.style.background = "red";
+		}
+		function rutina2() {
+			document.body.style.background = "green";
+		}
+		function rutina3() {
+			document.body.style.background = "blue";
+		}
+		function rutina4() {
+			document.body.style.background = "orange";
+		}
+		function rutina5() {
+			document.body.style.background = "purple";
+		}
+    </script>
+  </head>
+  <body>
+    <div id="div1" onmouseover="rutina1()"> El div 1 </div>
+    <div id="div2" onmouseover="rutina2()"> El div 2 </div>
+    <div id="div3" onmouseover="rutina3()"> El div 3 </div>
+    <div id="div4" onmouseover="rutina4()"> El div 4 </div>
+    <div id="div5" onmouseover="rutina5()"> El div 5 </div>
+  </body>
+</html>
