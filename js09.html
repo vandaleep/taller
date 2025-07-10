@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>JS 09</title>
+    <script>
+		function idiomaEfe(palabra) {
+			var res = "";
+			//Iterar sobre la palabra letra por letra
+			for (var i = 0; i < palabra.length; i++) {
+				//¿La letra es vocal? SI - agregar 'f' y la vocal, NO, Dejar igual
+				if (palabra[i] == 'a' || palabra[i] == 'e' || palabra[i] == 'i' || palabra[i] == 'o' || palabra[i] == 'u') {
+					res = res + palabra[i] + 'f' + palabra[i];
+				} else {
+					res = res + palabra[i];
+				}
+			}
+			//Informar de la palabra transformada
+			return res;
+		}
+    </script>
+  </head>
+  <body>
+   <h2>Idioma EFE</h2>
+	<script>
+		var palabra = prompt("Dame una palabra:");
+		document.write("En EFE: " + idiomaEfe(palabra) );
+	</script>
+  </body>
+</html>
