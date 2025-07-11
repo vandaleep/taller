@@ -3,6 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script>
+		function botones_click() {
+			let display = document.getElementById("display");
+			let texto = event.target.value;
+			
+			if (texto == "C") {
+				display.value = "";
+			} else if(texto == "=") {
+				display.value = eval(display.value);		
+			} else {
+				display.value = display.value + texto;
+			}
+		}
+    </script>
   </head>
   <body>
     <table border>
@@ -12,34 +26,32 @@
 			</td>
 		</tr>
 		<tr>
-			<td>21</td>
-			<td>22</td>
-			<td>23</td>
-			<td>24</td>
+			<td> <input type="button" value="C" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="/" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="*" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="-" onclick="botones_click()" class="celda1"> </td>
 		</tr>
 		<tr>
-			<td>31</td>
-			<td>32</td>
-			<td>33</td>
-			<td rowspan="2">34</td>
+			<td> <input type="button" value="7" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="8" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="9" onclick="botones_click()" class="celda1"> </td>
+			<td rowspan="2"> <input type="button" value="+" onclick="botones_click()" class="celda2v"> </td>
 		</tr>
 		<tr>
-			<td>41</td>
-			<td>42</td>
-			<td>43</td>
+			<td> <input type="button" value="4" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="5" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="6" onclick="botones_click()" class="celda1"> </td>
 			
 		</tr>
 		<tr>
-			<td>51</td>
-			<td>52</td>
-			<td>53</td>
-			<td rowspan="2">54</td>
+			<td> <input type="button" value="1" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="2" onclick="botones_click()" class="celda1"> </td>
+			<td> <input type="button" value="3" onclick="botones_click()" class="celda1"> </td>
+			<td rowspan="2"> <input type="button" value="=" onclick="botones_click()" class="celda2v"> </td>
 		</tr>
 		<tr>
-			<td colspan="2">61</td>
-			
-			<td>63</td>
-			
+			<td colspan="2"><input type="button" value="0" onclick="botones_click()" class="celda2h"></td>
+			<td> <input type="button" value="." onclick="botones_click()" class="celda1"> </td>
 		</tr>
 	</table>
   </body>
