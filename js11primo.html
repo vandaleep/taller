@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JS 11 primo</title>
+    <style>
+		#div1 { background-color: red; border-style:dotted;}
+		#div2 { background-color: green; border-style:dotted;}
+		#div3 { background-color: blue; border-style:dotted;}
+		#div4 { background-color: orange; border-style:dotted;}
+		#div5 { background-color: purple; border-style:dotted;}
+	</style>
+    <script>
+		function rutina() {
+			console.log(event.target.id);
+			let color = "black";
+			switch (event.target.id) {
+				case "div1": color = "red"; 
+					break;
+				case "div2": color = "green"; 
+					break;
+				case "div3": color = "blue"; 
+					break;
+				case "div4": color = "orange"; 
+					break;
+				case "div5": color = "purple"; 
+					break;
+				default:
+			}
+			document.body.style.background = color;
+		}
+    </script>
+  </head>
+  <body>
+    <div id="div1" onmouseover="rutina()"> El div 1 </div>
+    <div id="div2" onmouseover="rutina()"> El div 2 </div>
+    <div id="div3" onmouseover="rutina()"> El div 3 </div>
+    <div id="div4" onmouseover="rutina()"> El div 4 </div>
+    <div id="div5" onmouseover="rutina()"> El div 5 </div>
+  </body>
+</html>
