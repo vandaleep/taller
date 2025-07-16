@@ -8,11 +8,11 @@
 		//Credenciales válidas
 		if($_POST["login"] == $loginValido
 			&& $_POST["pass"] == $passValido) {
-			echo "<script>document.href='pagbien.php';</script>";
+			echo "<script>document.location.href='pagbien.php';</script>";
 			die();
 		} //Credenciales inválidas
 		else {
-			"<script>document.href='pagmal.php';</script>";
+			echo "<script>document.location.href='pagmal.html';</script>";
 		}
 	}
 	//La página se carga por primera vez
