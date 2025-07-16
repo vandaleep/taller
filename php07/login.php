@@ -8,6 +8,8 @@
 		//Credenciales válidas
 		if($_POST["login"] == $loginValido
 			&& $_POST["pass"] == $passValido) {
+			setcookie("galletita", "EN_SESION", time() + (86400
+* 30), "/");
 			echo "<script>document.location.href='pagbien.php';</script>";
 			die();
 		} //Credenciales inválidas
